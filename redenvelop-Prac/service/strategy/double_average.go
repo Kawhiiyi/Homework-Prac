@@ -22,4 +22,11 @@ func DoubleAverage(count, amount int64) int64 {
 	return x
 }
 
-
+func RandomAmount(totalAmount, totalNum int64, remainNum int64) int64 {
+	if remainNum == 1 {
+		return totalAmount
+	}
+	max := totalAmount - remainNum + 1
+	amount := rand.Int63n(max) + 1
+	return amount
+}

@@ -12,3 +12,5 @@ var (
 	RpStatusOver    = 10
 	RpStatusExpired = 15
 )
+
+const RpStatusReceived int = 1

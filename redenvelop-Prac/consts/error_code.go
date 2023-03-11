@@ -24,4 +24,12 @@ var (
 	InsertError = buildErrorCode(-3, "insert data error")
 
 	ServiceBusy = buildErrorCode(-110, "service busy ")
+
+	RpNotFoundError = buildErrorCode(-10001, "Rp record not found")
+
+	RpStatusError = buildErrorCode(-6, "red packet status error")
+
+	RpExpiredError = buildErrorCode(-6, "red packet expired")
+
+	RpReceivedError = buildErrorCode(-4, "all the red packets are received")
 )

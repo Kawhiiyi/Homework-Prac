@@ -21,7 +21,7 @@ func RetJsonWithData(c *gin.Context, data string) {
 	})
 }
 
-func RetErrorJson(c *gin.Context, rErr consts.RError) {
+func RetErrJson(c *gin.Context, rErr consts.RError) {
 	c.JSON(http.StatusOK, gin.H{
 		"code": rErr.Code,
 		"msg":  rErr.Msg,
