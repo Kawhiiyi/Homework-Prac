@@ -1,9 +1,12 @@
 package utils
 
 import (
+	"encoding/json"
 	"github.com/gin-gonic/gin"
+	"io"
 	"net/http"
 	"redenvelop-Prac/consts"
+	"strings"
 )
 
 func RetJson(c *gin.Context) {
@@ -26,4 +29,13 @@ func RetErrJson(c *gin.Context, rErr consts.RError) {
 		"code": rErr.Code,
 		"msg":  rErr.Msg,
 	})
+}
+
+func StringToReader(s string) io.Reader {
+	return strings.NewReader(s)
+}
+
+func Struct2Json(v interface{}) string {
+	b, _ := json.Marshal(v)
+	return string(b)
 }

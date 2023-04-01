@@ -107,7 +107,7 @@ func QuerySendRecordsByPage(c *gin.Context) {
 	}
 	retVal := &model.QuerySendRecordRespByPage{
 		RpSendRecordList: result,
-		Total:            count,
+		Total:            int(count),
 	}
 	utils.RetJsonWithData(c, utils.Json2String(retVal))
 }
